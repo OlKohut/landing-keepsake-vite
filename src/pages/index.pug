@@ -27,3 +27,15 @@ block content
 
 block footer
     include ../components/footer
+
+append styles
+    //- місце для preload шрифту або додаткових стилів
+
+prepend scripts
+    //- місце для скриптів, які мають завантажитися першими
+
+append styles
+    //- сюди ляже preload шрифту у завданні 5
+
+prepend scripts
+    script(type='module' src='/src/scripts/subscribe.js')
