@@ -1,0 +1,7 @@
+mixin btn(text, href = '#', modifier)
+    - const cls = ['btn']
+    - if (modifier) cls.push(`btn--${modifier}`)
+    a(class=cls href=href)&attributes(attributes)
+        if block
+            block
+        = text
