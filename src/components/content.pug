@@ -1,3 +1,6 @@
 +btn('See our works', '#works')
-+btn('Get in touch', '#contact', 'ghost')
-+icon('monitor')
++icon('heart')
+ul
+    each work in works
+        li(data-category=work.category)
+            +work-card(work)

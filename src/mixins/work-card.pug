@@ -1,0 +1,6 @@
+mixin work-card(work)
+    a.work-card(href='#')&attributes(attributes)
+        +picture(work.image, work.alt, 800, 800, '(min-width: 1280px) 357px, (min-width: 768px) 50vw, 100vw')
+        span.work-card__overlay
+            span.work-card__name= work.title
+            span.work-card__category= work.category

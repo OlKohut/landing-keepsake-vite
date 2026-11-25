@@ -1,0 +1,7 @@
+mixin picture(name, alt, width, height, sizes = '100vw', lazy = true)
+    - const base = '/src/assets/images'
+    - const srcset = (ext) => [400, 800].map(w => `${base}/${name}-${w}.${ext} ${w}w`).join(', ')
+    picture
+        source(type='image/avif' srcset=srcset('avif') sizes=sizes)
+        source(type='image/webp' srcset=srcset('webp') sizes=sizes)
+        img(src=`${base}/${name}-800.jpg` alt=alt width=width height=height loading=(lazy ? 'lazy' : false) decoding='async')&attributes(attributes)
