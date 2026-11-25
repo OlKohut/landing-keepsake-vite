@@ -1,5 +1,20 @@
 footer.footer
-    .footer-outer
-        .footer-inner
-            include logo
-            
+    .container
+        .footer__top
+            form.subscribe#subscribe(novalidate)
+                h2.subscribe__title Subscribe
+                .subscribe__row
+                    label.sr(for='email') Email
+                    input.input#email(type='email' name='email' placeholder='Your email' required)
+                    +btn('Subscribe')(type='submit')
+            .footer__links
+                each column in footerColumns
+                    div
+                        h2.footer__title= column.title
+                        ul
+                            each link in column.links
+                                li
+                                    a(href='#')= link
+        .footer__bottom
+            p.copy © 2026 Keepsake. All rights reserved.
+            +socials(socials)

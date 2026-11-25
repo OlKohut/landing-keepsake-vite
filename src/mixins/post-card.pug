@@ -1,0 +1,8 @@
+mixin post-card(post)
+    article.post&attributes(attributes)
+        +picture(post.image, post.title, 400, 300, '(min-width: 768px) 200px, 100vw')
+        div
+            p.post__meta #{post.date} / #{post.category}
+            h3.post__title= post.title
+            p= post.text
+            a.link(href='#') Read more

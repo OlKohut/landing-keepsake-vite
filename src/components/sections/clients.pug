@@ -1,0 +1,14 @@
+section.section#clients
+    .container
+        h2.title Clients &amp; kind words
+        ul.clients
+            each client in clients
+                li= client
+        figure.review
+            blockquote.review__text= review.text
+            figcaption.review__author
+                span.avatar(aria-hidden='true')= review.initials
+                span
+                    b.review__name= review.name
+                    br
+                    span.review__job= review.job

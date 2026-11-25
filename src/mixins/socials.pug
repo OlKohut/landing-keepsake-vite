@@ -1,0 +1,5 @@
+mixin socials(items)
+    ul.socials&attributes(attributes)
+        each item in items
+            li
+                a(href=item.href aria-label=item.label)= item.short
