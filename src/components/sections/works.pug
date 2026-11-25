@@ -1,0 +1,18 @@
+section.section.works#works
+    .container
+        h2.title Our awesome works
+
+        //- радіокнопки фільтра (стан :checked ~ з lab-07)
+        each filter, i in filters
+            input.sr(type='radio' name='filter' id=`f-${filter.id}` checked=(i === 0))
+
+        .chips
+            each filter in filters
+                label.chip(for=`f-${filter.id}`)= filter.label
+
+        ul.grid
+            each work in works
+                li(data-category=work.category)
+                    +work-card(work)
+
+        +btn('Load more works', '#', 'ghost')(class='btn--center')
