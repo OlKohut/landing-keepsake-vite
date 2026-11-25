@@ -1,0 +1,47 @@
+@use '../utils' as *;
+
+:root {
+  @each $name, $value in $colors {
+    --color-#{$name}: #{$value};
+  }
+
+  @each $name, $value in $fonts {
+    --font-#{$name}: #{$value};
+  }
+
+  --side: #{rem(20)};
+  --section-gap: #{rem(56)};
+  --header-h: #{rem(64)};
+  --gap: #{rem(12)};
+  --fs-h1: #{rem(26)};
+  --fs-cta: #{rem(22)};
+  --fs-ui: #{rem(12)};
+  --fs-review: #{rem(16)};
+  --fs-stat: #{rem(38)};
+  --fs-logo: #{rem(22)};
+  --logo-k: #{rem(34)};
+  --icon-service: #{rem(72)};
+
+  @include mq(md) {
+    --side: #{rem(40)};
+    --section-gap: #{rem(72)};
+    --fs-h1: #{rem(32)};
+    --fs-cta: #{rem(24)};
+    --fs-ui: #{rem(13)};
+    --fs-review: #{rem(19)};
+    --fs-stat: #{rem(40)};
+    --fs-logo: #{rem(26)};
+    --logo-k: #{rem(40)};
+    --icon-service: #{rem(96)};
+  }
+
+  @include mq(lg) {
+    --side: #{rem(90)};
+    --section-gap: #{rem(90)};
+    --gap: #{rem(14)};
+    --fs-h1: #{rem(40)};
+    --fs-cta: #{rem(28)};
+    --fs-review: #{rem(22)};
+    --fs-stat: #{rem(48)};
+  }
+}

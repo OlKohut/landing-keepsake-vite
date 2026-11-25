@@ -1,16 +1,19 @@
-*, html, body {
-  font-family: "Montserrat", sans-serif;
-}
+@use '../utils' as *;
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: rem(70);
 }
 
-a {
-  cursor: pointer;
-  text-decoration: none;
+body {
+  padding-top: var(--header-h);
+  overflow-x: hidden;
+  font-family: var(--font-body);
+  font-size: rem(14);
+  line-height: rem(22);
+  color: var(--color-text);
 }
 
-a:hover {
-  text-decoration: underline;
+:focus-visible {
+  @include focus-ring;
 }
