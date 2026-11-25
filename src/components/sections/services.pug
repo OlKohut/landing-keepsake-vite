@@ -1,0 +1,10 @@
+section.section#services
+    .container
+        h2.title What do we do
+        ul.services
+            each service in services
+                li.service
+                    span.service__icon
+                        +icon(service.icon)
+                    h3.service__name= service.title
+                    p= service.text
