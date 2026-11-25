@@ -1,7 +1,4 @@
-.footer {
-  background: var(--color-secondary);
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
+footer.footer
+    .footer-outer
+        .footer-inner
+            include logo
