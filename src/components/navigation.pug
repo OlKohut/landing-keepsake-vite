@@ -1,5 +1,8 @@
-nav(class="navigation")
-    ul
-        each link in navLinks
+nav.nav(aria-label='Main')
+    ul.nav__list
+        each link, i in navLinks
             li
-                a(href=link.href)= link.text
+                a.nav__link(href=link.href class=(link.active ? 'is-active' : false) aria-current=(i === 0 ? 'page' : false))= link.text
+    .nav__extra
+        +btn('Contact us', '#contact')
+        +btn('Favourites', '#', 'ghost')
