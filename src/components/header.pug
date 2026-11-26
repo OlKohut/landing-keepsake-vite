@@ -1,4 +1,12 @@
 header.header
+    input.menu-toggle#menu-toggle(type='checkbox' aria-label='Toggle menu')
     .container.header__inner
         include logo
+        label.burger(for='menu-toggle')
+            span.burger__open
+                +icon('menu', 20)
+            span.burger__close
+                +icon('close', 20)
         include navigation
+        a.fav(href='#' aria-label='Favourites')
+            +icon('fav', 16)

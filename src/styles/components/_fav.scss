@@ -1,0 +1,17 @@
+@use '../utils' as *;
+
+.fav {
+  display: none;
+
+  @include mq(md) {
+    @include flex-center;
+    width: rem(36);
+    height: rem(36);
+    color: var(--color-white);
+    background: var(--color-accent);
+
+    &:hover {
+      background: var(--color-accent-hover);
+    }
+  }
+}

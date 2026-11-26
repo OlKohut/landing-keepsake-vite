@@ -1,0 +1,18 @@
+@use '../utils' as *;
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+  font: 700 var(--fs-logo) / 1 var(--font-logo);
+  color: var(--color-text-dark);
+
+  &__k {
+    @include flex-center;
+    width: var(--logo-k);
+    height: var(--logo-k);
+    color: var(--color-white);
+    background: var(--color-text-dark);
+    border-radius: 50%;
+  }
+}

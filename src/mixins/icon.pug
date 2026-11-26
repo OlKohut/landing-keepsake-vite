@@ -18,6 +18,15 @@ mixin icon(name, size = 40)
                 circle(cx='28' cy='11' r='3')
         when 'heart'
             svg(width=size height=size viewBox='0 0 40 40' fill='#f95858' aria-hidden='true')
-                path(d='M20 34s-13-8.5-13-18a7 7 0 0 1 13-3.5A7 7 0 0 1 33 16c0 9.5-13 18-13 18z')        
+                path(d='M20 34s-13-8.5-13-18a7 7 0 0 1 13-3.5A7 7 0 0 1 33 16c0 9.5-13 18-13 18z')
+        when 'menu'
+            svg(width=size height=size viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' aria-hidden='true')
+                path(d='M4 7h16M4 12h16M4 17h16')
+        when 'close'
+            svg(width=size height=size viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' aria-hidden='true')
+                path(d='M6 6l12 12M18 6L6 18')
+        when 'fav'
+            svg(width=size height=size viewBox='0 0 40 40' fill='currentColor' aria-hidden='true')
+                path(d='M20 34s-13-8.5-13-18a7 7 0 0 1 13-3.5A7 7 0 0 1 33 16c0 9.5-13 18-13 18z')
         default
             //- невідома іконка: нічого не виводимо
