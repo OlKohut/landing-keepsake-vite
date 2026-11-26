@@ -1,0 +1,48 @@
+@use '../utils' as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(8);
+  height: rem(40);
+  padding: 0 rem(22);
+  font: 400 var(--fs-ui) / 1 var(--font-head);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-white);
+  background: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+
+  &:hover {
+    background: var(--color-accent-hover);
+    border-color: var(--color-accent-hover);
+  }
+
+  &--ghost {
+    color: var(--color-text-dark);
+    background: transparent;
+    border-color: var(--color-border);
+
+    &:hover {
+      color: var(--color-accent);
+      background: transparent;
+      border-color: var(--color-accent);
+    }
+  }
+
+  &--center {
+    display: flex;
+    width: 100%;
+    margin: rem(28) auto 0;
+
+    @include mq(md) {
+      width: rem(200);
+    }
+  }
+}
