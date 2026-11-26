@@ -1,7 +1,7 @@
-section.stats-wrap(aria-label='Statistics')
+section.stats(aria-label='Statistics')
     .container
-        ul.stats
+        ul.stats__list
             each stat in stats
-                li
+                li.stats__item
                     span.stats__num= stat.value
                     span.stats__label= stat.label

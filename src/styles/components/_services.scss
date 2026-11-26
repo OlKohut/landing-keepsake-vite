@@ -1,0 +1,46 @@
+@use '../utils' as *;
+
+.services {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(32) 0;
+  }
+
+  &__item {
+    flex: 0 0 50%;
+    padding-inline: rem(8);
+    text-align: center;
+
+    @include mq(lg) {
+      flex-basis: 25%;
+    }
+  }
+
+  &__icon {
+    @include flex-center;
+    width: var(--icon-service);
+    height: var(--icon-service);
+    margin: 0 auto rem(16);
+    background: var(--color-bg-light);
+    border-radius: 50%;
+
+    svg {
+      width: 40%;
+      height: 40%;
+    }
+  }
+
+  &__name {
+    margin-bottom: rem(8);
+    font: 400 rem(14) / 1.2 var(--font-head);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--color-text-dark);
+  }
+
+  &__text {
+    font-size: rem(13);
+    line-height: rem(20);
+  }
+}

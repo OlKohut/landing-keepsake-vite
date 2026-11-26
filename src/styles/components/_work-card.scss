@@ -1,0 +1,66 @@
+@use '../utils' as *;
+
+.work-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 1 / 0.72;
+  background: var(--color-bg-light);
+
+  @include mq(md) {
+    aspect-ratio: 1 / 0.79;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    @include flex-center(column);
+    gap: rem(8);
+    color: var(--color-white);
+    text-align: center;
+    background: var(--color-overlay);
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+
+  &:hover &__overlay,
+  &:focus-visible &__overlay,
+  &:focus-within &__overlay {
+    opacity: 1;
+  }
+
+  &__plus {
+    @include flex-center;
+    width: rem(44);
+    height: rem(44);
+    margin-bottom: rem(6);
+    font: 300 rem(28) / 1 var(--font-head);
+    background: var(--color-teal);
+    border-radius: 50%;
+  }
+
+  &__name {
+    font: 400 rem(16) / 1 var(--font-head);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  &__line {
+    width: rem(24);
+    height: 2px;
+    background: var(--color-accent);
+  }
+
+  &__category {
+    font-size: rem(12);
+    color: var(--color-teal);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
